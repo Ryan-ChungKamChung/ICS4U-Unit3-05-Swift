@@ -10,66 +10,49 @@
 //
 
 // The class of a vehicle
-class Vehicle {
-    private let numOfDoors: Int
-    private let maxSpeed: Int
-    private var licensePlate: String
-    private var colour: String
-    private var speed: Int
+public class Vehicle {
+    private(set) var numOfDoors: Int {
+        get { return self.numOfDoors }
+        set(initNumOfDoors) { self.numOfDoors = initNumOfDoors}
+    }
+
+    private(set) var maxSpeed: Int {
+        get { return self.maxSpeed }
+        set(initMaxSpeed) { self.maxSpeed = initMaxSpeed}
+    }
+
+    private(set) var speed: Int {
+        get { return self.speed }
+        set(newSpeed) { self.speed = newSpeed }
+    }
+
+    var licensePlate: String {
+        get { return self.licensePlate }
+        set(newLicensePlate) { self.licensePlate = newLicensePlate }
+    }
+
+    var colour: String {
+        get { return self.colour }
+        set(newColour) { self.colour = newColour}
+    }
 
     // Instantiates a Vehicle
     init (numOfDoors: Int, maxSpeed: Int,
-        licensePlate: String, colour: String) {
+          licensePlate: String, colour: String) {
 
+        self.numOfDoors = numOfDoors
         self.licensePlate = licensePlate
         self.maxSpeed = maxSpeed
-        self.licensePlate = licensePlate
         self.colour = colour
         self.speed = 0
     }
 
-    // Gets the number of doors
-    func getNumOfDoors() -> Int {
-        return self.numOfDoors
-    }
-
-    // Gets the max speed
-    func getMaxSpeed() -> Int {
-        return self.maxSpeed
-    }
-
-    // Gets the license plate
-    func getLicensePlate() -> String {
-        return self.licensePlate
-    }
-
-    // Sets the license plate
-    func setLicensePlate(newLicensePlate: String) {
-        self.licensePlate = newLicensePlate
-    }
-
-    // Gets the colour
-    func getColour() -> String {
-        return self.colour
-    }
-
-    // Sets the colour
-    func setColour(newColour: String) {
-        self.color = newColour
-    }
-
-    // Gets the speed
-    func getSpeed() -> Int {
-        return self.speed
-    }
-
-    // Increases the acceleration
     func accelerate(accelerateBy: Int) {
         self.speed += accelerateBy
     }
 
-    // Decreases the acceleration
     func brake(brakeBy: Int) {
         self.speed -= brakeBy
     }
+
 }
