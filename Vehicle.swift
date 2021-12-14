@@ -12,10 +12,6 @@
 // The class of a vehicle
 public class Vehicle {
 
-    // Properties Declaration
-    // Swift auto-generates getters and setters
-    // var has both getter and setter
-    // let has only getter after init
     let numOfDoors: Int
     let maxSpeed: Int
     private(set) var speed: Int
