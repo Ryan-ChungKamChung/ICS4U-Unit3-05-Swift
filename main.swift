@@ -45,3 +45,5 @@ print(
     Current Speed: \(vehicle1.speed)
     """
 )
+
+print("\nDone.")
