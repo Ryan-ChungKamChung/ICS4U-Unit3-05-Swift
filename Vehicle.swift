@@ -11,39 +11,25 @@
 
 // The class of a vehicle
 public class Vehicle {
-    private(set) var numOfDoors: Int {
-        get { return self.numOfDoors }
-        set(initNumOfDoors) { self.numOfDoors = initNumOfDoors}
-    }
 
-    private(set) var maxSpeed: Int {
-        get { return self.maxSpeed }
-        set(initMaxSpeed) { self.maxSpeed = initMaxSpeed}
-    }
+    // Properties Declaration
+    // Swift auto-generates getters and setters
+    // var has both getter and setter
+    // let has only getter after init
+    let numOfDoors: Int
+    let maxSpeed: Int
+    private(set) var speed: Int
+    var licensePlate: String
+    var colour: String
 
-    private(set) var speed: Int {
-        get { return self.speed }
-        set(newSpeed) { self.speed = newSpeed }
-    }
+    // Initializes a Vehicle
+    init (newNumOfDoors: Int, newMaxSpeed: Int,
+          newLicensePlate: String, newColour: String) {
 
-    var licensePlate: String {
-        get { return self.licensePlate }
-        set(newLicensePlate) { self.licensePlate = newLicensePlate }
-    }
-
-    var colour: String {
-        get { return self.colour }
-        set(newColour) { self.colour = newColour}
-    }
-
-    // Instantiates a Vehicle
-    init (numOfDoors: Int, maxSpeed: Int,
-          licensePlate: String, colour: String) {
-
-        self.numOfDoors = numOfDoors
-        self.licensePlate = licensePlate
-        self.maxSpeed = maxSpeed
-        self.colour = colour
+        self.numOfDoors = newNumOfDoors
+        self.licensePlate = newLicensePlate
+        self.maxSpeed = newMaxSpeed
+        self.colour = newColour
         self.speed = 0
     }
 
@@ -54,5 +40,4 @@ public class Vehicle {
     func brake(brakeBy: Int) {
         self.speed -= brakeBy
     }
-
 }

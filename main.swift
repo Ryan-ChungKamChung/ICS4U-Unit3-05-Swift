@@ -1,26 +1,31 @@
-let vehicle1 = Vehicle(numOfDoors: 4, maxSpeed: 150,
-    licensePlate: "ASDF404", colour: "Red")
-let vehicle2 = Vehicle(numOfDoors: 2, maxSpeed: 200,
-    licensePlate: "QWER123", colour: "Blue")
+//
+//  main.swift
+//
+//  Created by Ryan Chung
+//  Created on 2021-12-11
+//  Version 1.0
+//  Copyright (c) 2021 Ryan Chung. All rights reserved.
+//
+//  This class demonstrates the vehicle class
+//
+
+// Stub program to demonstrate the Vehicle class
+let vehicle1 = Vehicle(newNumOfDoors: 4, newMaxSpeed: 150,
+    newLicensePlate: "ASDF404", newColour: "Red")
+
+let vehicle2 = Vehicle(newNumOfDoors: 2, newMaxSpeed: 200,
+    newLicensePlate: "ASDF404", newColour: "Red")
 
 vehicle1.licensePlate = "FGHJ968"
 vehicle1.colour = "Green"
 vehicle1.accelerate(accelerateBy: 60)
 
-print("\nLicense Plate: " + vehicle1.licensePlate
-    + "\nColour: " + vehicle1.colour
-    + "\nNumber of Doors: " + vehicle1.numOfDoors
-    + "\nMax Speed: " + vehicle1.maxSpeed
-    + "\nCurrent Speed: " + vehicle1.speed)
-
-vehicle2.colour = "Black"
-vehicle2.accelerate(accelerateBy: 75)
-vehicle2.brake(brakeBy: 60)
-
-print("\nLicense Plate: " + vehicle2.licensePlate
-    + "\nColour: " + vehicle2.colour
-    + "\nNumber of Doors: " + vehicle2.numOfDoors
-    + "\nMax Speed: " + vehicle2.maxSpeed
-    + "\nCurrent Speed: " + vehicle2.speed)
-
-print("\nDone.")
+print(
+    """
+    License Plate: \(vehicle1.licensePlate)
+    Colour: \(vehicle1.colour)
+    Number of Doors: \(vehicle1.numOfDoors)
+    Max Speed: \(vehicle1.maxSpeed)
+    Current Speed: \(vehicle1.speed)
+    """
+)
