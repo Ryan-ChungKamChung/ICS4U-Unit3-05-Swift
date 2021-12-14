@@ -12,6 +12,8 @@
 // The class of a vehicle
 public class Vehicle {
 
+    // Property declaration, getters and setters are under
+    // the hood
     let numOfDoors: Int
     let maxSpeed: Int
     private(set) var speed: Int
@@ -29,10 +31,12 @@ public class Vehicle {
         self.speed = 0
     }
 
+    // Increases the speed
     func accelerate(accelerateBy: Int) {
         self.speed += accelerateBy
     }
 
+    // Decreases the speed
     func brake(brakeBy: Int) {
         self.speed -= brakeBy
     }

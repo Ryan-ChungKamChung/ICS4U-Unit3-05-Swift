@@ -14,7 +14,7 @@ let vehicle1 = Vehicle(newNumOfDoors: 4, newMaxSpeed: 150,
     newLicensePlate: "ASDF404", newColour: "Red")
 
 let vehicle2 = Vehicle(newNumOfDoors: 2, newMaxSpeed: 200,
-    newLicensePlate: "ASDF404", newColour: "Red")
+    newLicensePlate: "QWER123", newColour: "Blue")
 
 vehicle1.licensePlate = "FGHJ968"
 vehicle1.colour = "Green"
@@ -22,6 +22,22 @@ vehicle1.accelerate(accelerateBy: 60)
 
 print(
     """
+
+    License Plate: \(vehicle1.licensePlate)
+    Colour: \(vehicle1.colour)
+    Number of Doors: \(vehicle1.numOfDoors)
+    Max Speed: \(vehicle1.maxSpeed)
+    Current Speed: \(vehicle1.speed)
+    """
+)
+
+vehicle2.colour = "Black"
+vehicle2.accelerate(accelerateBy: 75)
+vehicle2.brake(brakeBy: 60)
+
+print(
+    """
+
     License Plate: \(vehicle1.licensePlate)
     Colour: \(vehicle1.colour)
     Number of Doors: \(vehicle1.numOfDoors)
