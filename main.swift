@@ -38,11 +38,11 @@ vehicle2.brake(brakeBy: 60)
 print(
     """
 
-    License Plate: \(vehicle1.licensePlate)
-    Colour: \(vehicle1.colour)
-    Number of Doors: \(vehicle1.numOfDoors)
-    Max Speed: \(vehicle1.maxSpeed)
-    Current Speed: \(vehicle1.speed)
+    License Plate: \(vehicle2.licensePlate)
+    Colour: \(vehicle2.colour)
+    Number of Doors: \(vehicle2.numOfDoors)
+    Max Speed: \(vehicle2.maxSpeed)
+    Current Speed: \(vehicle2.speed)
     """
 )
 
